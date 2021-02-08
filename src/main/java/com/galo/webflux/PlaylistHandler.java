@@ -4,14 +4,13 @@ import com.galo.webflux.api.document.Playlist;
 import com.galo.webflux.api.services.PlaylistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 import static org.springframework.web.reactive.function.BodyInserters.fromPublisher;
 import reactor.core.publisher.Mono;
 
-@Component
+//@Component
 public class PlaylistHandler {
 
     @Autowired
@@ -20,7 +19,7 @@ public class PlaylistHandler {
     public Mono<ServerResponse> findAll(ServerRequest request) {
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(service.finAll(), Playlist.class);
+                .body(service.findAll(), Playlist.class);
     }
 
     public Mono<ServerResponse> findById(ServerRequest request) {

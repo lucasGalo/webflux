@@ -15,7 +15,7 @@ public class PlaylistServiceImpl implements PlaylistService {
     private PlaylistRepository pr;
 
     @Override
-    public Flux<Playlist> finAll() {
+    public Flux<Playlist> findAll() {
         return pr.findAll();
     }
 

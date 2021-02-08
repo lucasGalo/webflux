@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 
 public interface PlaylistService {
 
-    Flux<Playlist> finAll();
+    Flux<Playlist> findAll();
     Mono<Playlist> findById(String id);
     Mono<Playlist> save(Playlist playlist);
 }
