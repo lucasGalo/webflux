@@ -3,7 +3,7 @@ package com.galo.webflux.api.document;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "playlist")
 public class Playlist {
     public Playlist() { }
 
